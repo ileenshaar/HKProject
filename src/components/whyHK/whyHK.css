@@ -1,0 +1,207 @@
+.circlesContainrer {
+  background-image: url("../../images/worldwide4.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  padding: 100px 200px;
+  background-color: #faf7f7;
+}
+
+.title {
+  color: #1a0474;
+  text-align: center;
+  font-size: 60px;
+  margin: 100px 0;
+  border-radius: 50%;
+  border: 4px dashed #1a0474;
+}
+
+.circleDual {
+  display: flex;
+  justify-content: space-between;
+}
+
+.circle1,
+.circle3,
+.circle2,
+.circle4 {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #9c8ae1, #6a5ba4b2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 10px 8px 5px gray;
+  text-align: center;
+}
+
+.circle2,
+.circle4 {
+  margin-bottom: 0%;
+}
+/* Animation for slide-in */
+@keyframes slide-inL {
+  from {
+    transform: translateX(150vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-inR {
+  from {
+    transform: translateX(-150vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+/* Add animation class */
+.circle1,
+.circle2 {
+  opacity: 0; /* Start invisible */
+  transform: translateX(150vw); /* Start off-screen */
+}
+
+.circle3,
+.circle4 {
+  opacity: 0; /* Start invisible */
+  transform: translateX(150vw); /* Start off-screen */
+}
+
+.circle1.animate,
+.circle2.animate {
+  animation: slide-inL 1s ease-in-out forwards; /* Smooth animation */
+  opacity: 1; /* Make visible when animating */
+}
+
+.circle3.animate,
+.circle4.animate {
+  animation: slide-inR 2s ease-in-out forwards; /* Smooth animation */
+  opacity: 1; /* Make visible when animating */
+}
+
+.circle1 p,
+.circle2 p,
+.circle3 p,
+.circle4 p {
+  max-width: 80%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-height: 40%;
+  overflow-y: scroll;
+  padding-right: 5px;
+  color: aliceblue;
+  font-size: 20px;
+}
+
+.circle1 h1,
+.circle2 h1,
+.circle3 h1,
+.circle4 h1 {
+  position: absolute;
+  top: 0;
+  color: #5e5d5d;
+  font-size: 2.5em;
+}
+
+.circle1 p::-webkit-scrollbar,
+.circle2 p::-webkit-scrollbar,
+.circle3 p::-webkit-scrollbar,
+.circle4 p::-webkit-scrollbar {
+  width: 6px; /* Set the scrollbar width */
+}
+
+.circle1 p::-webkit-scrollbar-thumb,
+.circle2 p::-webkit-scrollbar-thumb,
+.circle3 p::-webkit-scrollbar-thumb,
+.circle4 p::-webkit-scrollbar-thumb {
+  background: #8888889f; /* Thumb color */
+  border-radius: 3px;
+}
+
+.circle1 p::-webkit-scrollbar-thumb:hover,
+.circle2 p::-webkit-scrollbar-thumb:hover,
+.circle3 p::-webkit-scrollbar-thumb:hover,
+.circle4 p::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb hover color */
+}
+
+.titleSmallScreen {
+  display: none;
+  color: #1a0474;
+  text-align: center;
+  font-size: 60px;
+  border-radius: 50%;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1200px) {
+  .circlesContainrer {
+    padding: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .circlesContainrer {
+    padding: 100px 50px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .circlesContainrer {
+    padding: 100px 30px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .circlesContainrer {
+    padding: 100px 30px;
+  }
+
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .circle1,
+  .circle2,
+  .circle3,
+  .circle4 {
+    width: 300px;
+    height: 300px;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+  .title {
+    display: none;
+  }
+  .titleSmallScreen {
+    display: flex;
+  }
+  .circleDual {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .circlesContainrer {
+    padding: 50px 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .titleSmallScreen {
+    display: flex;
+    font-size: 40px;
+  }
+  .circlesContainrer {
+    padding: 0;
+  }
+}

@@ -1,0 +1,57 @@
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  margin: auto;
+  padding-top: 150px;
+  height: calc(85vh - 150px);
+}
+
+.introTexth4 {
+  position: relative;
+  width: 100%;
+  left: 0;
+  color: #1a0474;
+  z-index: 9;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 36.3px;
+  letter-spacing: 0.17em;
+  margin-bottom: 20px;
+}
+
+.introTexth3 {
+  color: aliceblue;
+  position: relative;
+  width: 100%;
+  left: 0;
+  z-index: 9;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 150px;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 1050px) {
+  .intro {
+    width: 90%;
+  }
+  .introTexth4 {
+    line-height: 60px;
+  }
+  .introTexth3 {
+    font-size: 70px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (max-width: 511px) {
+  .intro {
+    width: 90%;
+  }
+  .introTexth3 {
+    font-size: 30px;
+    line-height: 50px;
+  }
+}

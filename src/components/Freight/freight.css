@@ -1,0 +1,91 @@
+.freightGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+  height: 50em;
+}
+
+.freightCol {
+  position: relative;
+  width: 100%;
+}
+
+.freightCol img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.freightColTitle {
+  position: absolute;
+  left: 0;
+  top: 80%;
+  background-color: #1a0474;
+  padding: 20px;
+  width: 60%;
+  text-align: end;
+  color: aliceblue;
+  word-wrap: wrap;
+  font-size: 2em;
+}
+
+.freightDesc {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 40%;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background-color: #4d3b81e0;
+  color: aliceblue;
+  padding-left: 10%;
+  padding-top: 30px;
+}
+
+.freightDesc button {
+  border-radius: 50%;
+  background-color: #1a0474;
+  width: 60px;
+  height: 60px;
+}
+
+.freightDesc h1 {
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.freightDesc p {
+  display: -webkit-box; /* Enables flexbox layout */
+  -webkit-box-orient: vertical; /* Sets vertical orientation */
+  overflow: hidden; /* Hides overflow */
+  text-overflow: ellipsis; /* Adds the ellipsis (...) */
+  -webkit-line-clamp: 4; /* Limits the number of lines to show */
+  max-width: 80%;
+  font-size: 1.3em;
+}
+
+.freightCol:hover {
+  .freightColTitle {
+    display: none;
+  }
+  .freightDesc {
+    display: flex;
+  }
+
+  img {
+    opacity: 0.5;
+    filter: grayscale(0.6);
+  }
+}
+
+.freightDesc button:hover {
+  background-color: #b7b7db;
+}
+
+@media screen and (max-width: 1500px) {
+  .freightColTitle {
+    top: 70%;
+    font-size: 1.5em;
+  }
+}

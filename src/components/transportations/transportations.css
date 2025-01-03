@@ -1,0 +1,74 @@
+.transportationGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.transportationGrid div {
+  position: relative;
+}
+
+.transportationGrid div img {
+  width: 100%;
+  height: 250px;
+}
+
+.transportationGrid div p {
+  position: absolute;
+  left: 25px;
+  bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+  color: aliceblue;
+  letter-spacing: 0.05em;
+}
+
+.transportationGrid div {
+  transition: transform 0.3s ease;
+}
+
+.transportationGrid div a {
+  display: none;
+  position: absolute;
+  bottom: 30px;
+  left: 25px;
+  align-items: center;
+  color: aliceblue;
+  font-size: 20px;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 3px;
+}
+
+.icon {
+  margin-left: 10px;
+}
+
+.transportationGrid div:hover a {
+  display: flex;
+}
+
+.transportationGrid div:hover p {
+  bottom: 40px;
+}
+
+.transportationGrid div:hover {
+  transform: scaleY(1.3);
+  transform-origin: bottom;
+}
+
+.transportationGrid div a:hover {
+  border-bottom: 3px solid aliceblue;
+}
+
+@media (max-width: 1024px) {
+  .transportationGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .transportationGrid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

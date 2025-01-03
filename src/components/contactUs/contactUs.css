@@ -1,0 +1,205 @@
+.ContainerContactUsAndText {
+  background-image: url("../../images/seaFreight4.jpg");
+  width: 100%;
+  height: fit-content;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 150px;
+  box-sizing: border-box;
+}
+
+.contactUsTextSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 50%;
+}
+
+.contactUsTextSection div img {
+  text-align: start;
+  height: 200px;
+  width: 400px;
+  margin: 0;
+}
+
+.contactUsText p {
+  font-size: 70px;
+  font-weight: 600;
+  color: #1a0474;
+  margin: 0;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.icons a {
+  color: aliceblue;
+}
+
+.icons a:hover {
+  color: #1a0474;
+}
+
+.contactUsForm {
+  background-color: rgba(251, 252, 252, 0.8);
+  min-width: 40%;
+  max-width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 80px;
+  gap: 50px;
+  box-shadow: 2px 0 10px gray;
+  height: fit-content;
+}
+
+.contactUsForm h1 {
+  color: #1a0474;
+  text-align: center;
+  font-size: 3em;
+  margin: 0%;
+}
+
+.contactUsForm .input {
+  border: 0;
+  border-bottom: 2px solid #1a0474;
+  background-color: transparent;
+  padding: 20px;
+  width: 100%;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+.selectRequest {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid #1a0474;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  color: rgb(77, 77, 77);
+}
+
+.errorp {
+  color: rgb(162, 16, 16);
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 0;
+}
+
+.requestMessage {
+  height: 30vh;
+  border: 2px solid #1a0474;
+  background-color: transparent;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.requestMessage textarea {
+  border: 0;
+  background-color: transparent;
+  font-size: 20px;
+  width: 90%;
+  height: 90%; /* Adjust height as needed */
+  resize: none; /* Prevent resizing if you don't want it */
+  overflow-wrap: break-word; /* Ensures long words break onto the next line */
+}
+
+input,
+textarea:focus {
+  outline: none;
+  border: none;
+}
+
+.input::placeholder,
+.requestMessage textarea::placeholder {
+  color: rgb(77, 77, 77);
+  font-size: 22px;
+  font-weight: 300;
+  vertical-align: top;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.contactUsForm .submit {
+  text-align: center;
+  background-color: rgb(212, 211, 211);
+  border-radius: 30px;
+  color: #1a0474;
+  align-self: center;
+  font-size: 25px;
+  font-weight: 700;
+  padding: 15px 50px;
+  border: 2px solid #1a0474;
+}
+
+.contactUsForm .submit:hover {
+  background-color: #1a0474;
+  color: rgb(212, 211, 211);
+}
+
+@media screen and (min-width: 2000px) {
+  .contactUsText p {
+    font-size: 100px;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .ContainerContactUsAndText {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .contactUsTextSection div img {
+    width: 80%;
+  }
+
+  .contactUsText p {
+    font-size: 50px;
+  }
+  .contactUsTextSection {
+    max-width: 40%;
+  }
+  .contactUsForm {
+    max-width: 50%;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ContainerContactUsAndText {
+    flex-direction: column;
+    height: fit-content;
+    gap: 150px;
+  }
+  .contactUsForm {
+    width: 100%;
+    max-width: none;
+  }
+  .contactUsTextSection {
+    width: 100%;
+    max-width: none;
+  }
+  .contactUsTextSection p {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactUsForm {
+    padding: 20px;
+  }
+
+  .contactUsTextSection p {
+    font-size: 30px;
+  }
+  .contactUsForm h1 {
+    font-size: 30px;
+  }
+}
