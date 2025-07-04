@@ -9,3 +9,9 @@
 video {
   object-fit: fill;
 }
+
+@media screen and (max-height: 1000px) {
+  .entryVideo {
+    height: 80%;
+  }
+}
