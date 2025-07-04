@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HKProject/static/css/main.e4cb9e7e.css",
-    "main.js": "/HKProject/static/js/main.892bba7c.js",
+    "main.css": "/HKProject/static/css/main.70e431ee.css",
+    "main.js": "/HKProject/static/js/main.409ebf08.js",
     "static/js/453.6cba51d5.chunk.js": "/HKProject/static/js/453.6cba51d5.chunk.js",
     "static/media/road-freight1.jpg": "/HKProject/static/media/road-freight1.fd50dbc2965debb96631.jpg",
     "static/media/ocean.png": "/HKProject/static/media/ocean.d6320e0a3ba904f1aba5.png",
@@ -11,6 +11,8 @@
     "static/media/seaFreight3.jpg": "/HKProject/static/media/seaFreight3.42c85b74f391aba5b409.jpg",
     "static/media/seaFreight.jpeg": "/HKProject/static/media/seaFreight.08618d01a3dd58e161e2.jpeg",
     "static/media/Hamdi.jpg": "/HKProject/static/media/Hamdi.a8d35a14bb4feb672f70.jpg",
+    "static/media/airFreight3.jpeg": "/HKProject/static/media/airFreight3.95a522536123475bdf77.jpeg",
+    "static/media/road-freight2.jpg": "/HKProject/static/media/road-freight2.48d40f475af222ec2451.jpg",
     "static/media/worldwide4.png": "/HKProject/static/media/worldwide4.ff3341b74127f178ffc4.png",
     "static/media/hkLogo.png": "/HKProject/static/media/hkLogo.246ea5ebf873f32e90cd.png",
     "static/media/download.jpg": "/HKProject/static/media/download.d21a384d1b7e7ec78714.jpg",
@@ -18,12 +20,12 @@
     "static/media/logo.svg": "/HKProject/static/media/logo.101d0febaf1a718428ff8bf12f19824c.svg",
     "static/media/hk.svg": "/HKProject/static/media/hk.a891de3664daf023cbc38711837892bb.svg",
     "index.html": "/HKProject/index.html",
-    "main.e4cb9e7e.css.map": "/HKProject/static/css/main.e4cb9e7e.css.map",
-    "main.892bba7c.js.map": "/HKProject/static/js/main.892bba7c.js.map",
+    "main.70e431ee.css.map": "/HKProject/static/css/main.70e431ee.css.map",
+    "main.409ebf08.js.map": "/HKProject/static/js/main.409ebf08.js.map",
     "453.6cba51d5.chunk.js.map": "/HKProject/static/js/453.6cba51d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e4cb9e7e.css",
-    "static/js/main.892bba7c.js"
+    "static/css/main.70e431ee.css",
+    "static/js/main.409ebf08.js"
   ]
 }
