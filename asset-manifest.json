@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HKProject/static/css/main.f35d5da2.css",
-    "main.js": "/HKProject/static/js/main.a5d771e0.js",
+    "main.css": "/HKProject/static/css/main.4e26bff5.css",
+    "main.js": "/HKProject/static/js/main.d4a1724f.js",
     "static/js/453.6cba51d5.chunk.js": "/HKProject/static/js/453.6cba51d5.chunk.js",
     "static/media/road-freight1.jpg": "/HKProject/static/media/road-freight1.fd50dbc2965debb96631.jpg",
     "static/media/ocean.png": "/HKProject/static/media/ocean.d6320e0a3ba904f1aba5.png",
@@ -17,15 +17,14 @@
     "static/media/hkLogo.png": "/HKProject/static/media/hkLogo.246ea5ebf873f32e90cd.png",
     "static/media/download.jpg": "/HKProject/static/media/download.d21a384d1b7e7ec78714.jpg",
     "static/media/road.jpg": "/HKProject/static/media/road.7f959e1c097648f9fd4c.jpg",
-    "static/media/logo.svg": "/HKProject/static/media/logo.101d0febaf1a718428ff8bf12f19824c.svg",
     "static/media/hk.svg": "/HKProject/static/media/hk.a891de3664daf023cbc38711837892bb.svg",
     "index.html": "/HKProject/index.html",
-    "main.f35d5da2.css.map": "/HKProject/static/css/main.f35d5da2.css.map",
-    "main.a5d771e0.js.map": "/HKProject/static/js/main.a5d771e0.js.map",
+    "main.4e26bff5.css.map": "/HKProject/static/css/main.4e26bff5.css.map",
+    "main.d4a1724f.js.map": "/HKProject/static/js/main.d4a1724f.js.map",
     "453.6cba51d5.chunk.js.map": "/HKProject/static/js/453.6cba51d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f35d5da2.css",
-    "static/js/main.a5d771e0.js"
+    "static/css/main.4e26bff5.css",
+    "static/js/main.d4a1724f.js"
   ]
 }
