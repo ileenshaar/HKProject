@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/HKProject/static/css/main.1365fa2a.css",
-    "main.js": "/HKProject/static/js/main.398e54c4.js",
+    "main.js": "/HKProject/static/js/main.9814b3e4.js",
     "static/js/453.6cba51d5.chunk.js": "/HKProject/static/js/453.6cba51d5.chunk.js",
     "static/media/road-freight1.jpg": "/HKProject/static/media/road-freight1.fd50dbc2965debb96631.jpg",
     "static/media/ocean.png": "/HKProject/static/media/ocean.d6320e0a3ba904f1aba5.png",
@@ -19,11 +19,11 @@
     "static/media/road.jpg": "/HKProject/static/media/road.7f959e1c097648f9fd4c.jpg",
     "index.html": "/HKProject/index.html",
     "main.1365fa2a.css.map": "/HKProject/static/css/main.1365fa2a.css.map",
-    "main.398e54c4.js.map": "/HKProject/static/js/main.398e54c4.js.map",
+    "main.9814b3e4.js.map": "/HKProject/static/js/main.9814b3e4.js.map",
     "453.6cba51d5.chunk.js.map": "/HKProject/static/js/453.6cba51d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1365fa2a.css",
-    "static/js/main.398e54c4.js"
+    "static/js/main.9814b3e4.js"
   ]
 }
