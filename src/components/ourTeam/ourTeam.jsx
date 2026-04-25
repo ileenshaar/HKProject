@@ -62,10 +62,10 @@ function OurTeam() {
             <div className="staffMember">
               <img className="staffMemberImg" src={staff.image} alt="Hamdi" />
               <div className="staffInfo">
-                <a className="staffPhone">
+                <a className="staffPhone" href="#">
                   <LocalPhoneIcon /> {staff.phone}
                 </a>
-                <a className="staffMail">
+                <a className="staffMail" href="#">
                   <MailIcon />
                   {staff.email}
                 </a>

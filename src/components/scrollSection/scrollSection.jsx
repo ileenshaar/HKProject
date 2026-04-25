@@ -61,7 +61,7 @@ function ScrollSection() {
 
       <div className="row" id="ScrollContainer">
         {Images.map((src, index) => (
-          <a key={index}>
+          <a key={index} href="#">
             <img src={src} alt={`cargo-${index}`} />
           </a>
         ))}

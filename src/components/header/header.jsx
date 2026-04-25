@@ -35,7 +35,7 @@ function Header() {
   return (
     <div className="header">
       <div className="logoContainer">
-        <img className="logo" src={logo} />
+        <img className="logo" src={logo} alt="logo for header" />
       </div>
 
       <div className={isClicked ? "contentBlock" : "content"}>
@@ -87,7 +87,7 @@ function Header() {
         <a href="#">NEWS</a>
         <a href="#">CONTACT US</a>
         <a href="#">
-          <img className="logoSec" src={hkLogo} />
+          <img className="logoSec" src={hkLogo} alt="main page" />
         </a>
         <a href="#">
           <button className="quote">GET A QUOTE</button>

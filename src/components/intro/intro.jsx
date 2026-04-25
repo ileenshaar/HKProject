@@ -1,6 +1,5 @@
 import React from "react";
 import "./intro.css";
-import Typography from "@mui/material/Typography";
 
 function Intro() {
   return (
