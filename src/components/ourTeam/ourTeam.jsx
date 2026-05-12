@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./ourTeam.css";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import MailIcon from "@mui/icons-material/Mail";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import StaffData from "./staffData";
+import { useLanguage } from "../LanguageContext/LanguageContext";
 
 function OurTeam() {
+  const { lang } = useLanguage();
   let slideTimer;
+
+  useEffect(() => {
+    document.querySelectorAll(".staffContainerTitle").forEach((el) => {
+      el.style.direction = lang === "ar" ? "rtl" : "ltr";
+    });
+  }, [lang]);
 
   function sideScroll(elementId, direction, speed, step) {
     let element = document.getElementById(elementId);
@@ -34,13 +42,20 @@ function OurTeam() {
   function stopScroll() {
     clearInterval(slideTimer);
   }
+
   return (
     <div className="staffContainer">
-      <h1 className="staffContainerTitle">OUR TEAM</h1>
+      <h1 className="staffContainerTitle">
+        {lang === "en" ? "OUR TEAM:" : "فريقنا:"}
+      </h1>
       <div className="staffMembersContainer">
         <button
-          onMouseEnter={() => sideScroll("staffMembersSection", "left", 30, 10)}
+          onMouseDown={() => sideScroll("staffMembersSection", "left", 30, 10)}
           onMouseLeave={stopScroll}
+          onMouseUp={stopScroll}
+          onTouchStart={() => sideScroll("staffMembersSection", "left", 30, 10)}
+          onTouchEnd={stopScroll}
+          onTouchCancel={stopScroll}
           style={{
             background: "none",
             border: "none",
@@ -59,7 +74,7 @@ function OurTeam() {
         </button>
         <div className="staffMembersSection" id="staffMembersSection">
           {StaffData.map((staff) => (
-            <div className="staffMember">
+            <div className="staffMember" key={staff.id}>
               <img className="staffMemberImg" src={staff.image} alt="Hamdi" />
               <div className="staffInfo">
                 <a className="staffPhone">
@@ -81,6 +96,12 @@ function OurTeam() {
             sideScroll("staffMembersSection", "right", 30, 10)
           }
           onMouseLeave={stopScroll}
+          onMouseUp={stopScroll}
+          onTouchStart={() =>
+            sideScroll("staffMembersSection", "right", 30, 10)
+          }
+          onTouchEnd={stopScroll}
+          onTouchCancel={stopScroll}
           style={{
             background: "none",
             border: "none",
@@ -99,7 +120,7 @@ function OurTeam() {
         </button>
       </div>
       <div className="meetTeam">
-        <button>MEET THE TEAM</button>
+        <button>{lang === "en" ? "Meet Our Team" : "تعرف على فريقنا"}</button>
       </div>
     </div>
   );

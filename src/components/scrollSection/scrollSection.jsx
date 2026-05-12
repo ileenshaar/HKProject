@@ -41,7 +41,8 @@ function ScrollSection() {
   return (
     <div className="ScrollContainer">
       <button
-        onMouseEnter={() => sideScroll("ScrollContainer", "left", 25, 10)}
+        onMouseDown={() => sideScroll("ScrollContainer", "left", 25, 10)}
+        onMouseUp={stopScroll}
         onMouseLeave={stopScroll}
         style={{
           background: "none",
@@ -68,7 +69,8 @@ function ScrollSection() {
       </div>
 
       <button
-        onMouseEnter={() => sideScroll("ScrollContainer", "right", 25, 10)}
+        onMouseDown={() => sideScroll("ScrollContainer", "right", 25, 10)}
+        onMouseUp={stopScroll}
         onMouseLeave={stopScroll}
         style={{ background: "none", border: "none", cursor: "pointer" }}
       >

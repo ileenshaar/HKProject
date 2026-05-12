@@ -3,7 +3,7 @@
   background-repeat: no-repeat;
   background-size: 100% 100%;
   position: relative;
-  padding: 100px 200px;
+  padding: 60px 200px;
   background-color: #faf7f7;
 }
 
@@ -11,9 +11,10 @@
   color: #1a0474;
   text-align: center;
   font-size: 60px;
-  margin: 100px 0;
-  border-radius: 50%;
+  margin: 60px 0;
   border: 4px dashed #1a0474;
+  border-radius: 50%;
+  padding: 20px 0;
 }
 
 .circleDual {
@@ -30,16 +31,15 @@
   border-radius: 50%;
   background: radial-gradient(circle, #9c8ae1, #6a5ba4b2);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   box-shadow: 10px 8px 5px gray;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.circle2,
-.circle4 {
-  margin-bottom: 0%;
-}
 /* Animation for slide-in */
 @keyframes slide-inL {
   from {
@@ -59,29 +59,14 @@
   }
 }
 
-/* Add animation class */
-.circle1,
-.circle2 {
-  opacity: 0; /* Start invisible */
-  transform: translateX(150vw); /* Start off-screen */
-}
-
-.circle3,
-.circle4 {
-  opacity: 0; /* Start invisible */
-  transform: translateX(150vw); /* Start off-screen */
-}
-
 .circle1.animate,
 .circle2.animate {
-  animation: slide-inL 1s ease-in-out forwards; /* Smooth animation */
-  opacity: 1; /* Make visible when animating */
+  animation: slide-inL 1s ease-in-out both;
 }
 
 .circle3.animate,
 .circle4.animate {
-  animation: slide-inR 2s ease-in-out forwards; /* Smooth animation */
-  opacity: 1; /* Make visible when animating */
+  animation: slide-inR 1s ease-in-out both;
 }
 
 .circle1 p,
@@ -91,35 +76,35 @@
   max-width: 80%;
   word-wrap: break-word;
   overflow-wrap: break-word;
-  max-height: 40%;
-  overflow-y: scroll;
-  padding-right: 5px;
+  max-height: 55%;
+  overflow-y: auto;
+  padding: 0 5px;
   color: aliceblue;
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0;
 }
 
 .circle1 h1,
 .circle2 h1,
 .circle3 h1,
 .circle4 h1 {
-  position: absolute;
-  top: 0;
-  color: #5e5d5d;
-  font-size: 2.5em;
+  color: aliceblue;
+  font-size: 2em;
+  margin: 0 0 10px 0;
 }
 
 .circle1 p::-webkit-scrollbar,
 .circle2 p::-webkit-scrollbar,
 .circle3 p::-webkit-scrollbar,
 .circle4 p::-webkit-scrollbar {
-  width: 6px; /* Set the scrollbar width */
+  width: 6px;
 }
 
 .circle1 p::-webkit-scrollbar-thumb,
 .circle2 p::-webkit-scrollbar-thumb,
 .circle3 p::-webkit-scrollbar-thumb,
 .circle4 p::-webkit-scrollbar-thumb {
-  background: #8888889f; /* Thumb color */
+  background: #8888889f;
   border-radius: 3px;
 }
 
@@ -127,7 +112,7 @@
 .circle2 p::-webkit-scrollbar-thumb:hover,
 .circle3 p::-webkit-scrollbar-thumb:hover,
 .circle4 p::-webkit-scrollbar-thumb:hover {
-  background: #555; /* Thumb hover color */
+  background: #555;
 }
 
 .titleSmallScreen {
@@ -141,27 +126,23 @@
 
 @media screen and (max-width: 1200px) {
   .circlesContainrer {
-    padding: 100px;
+    padding: 0 100px;
   }
 }
 
 @media screen and (max-width: 900px) {
   .circlesContainrer {
-    padding: 100px 50px;
+    padding: 0 50px;
   }
 }
 
 @media screen and (max-width: 800px) {
   .circlesContainrer {
-    padding: 100px 30px;
+    padding: 0 30px;
   }
 }
 
 @media screen and (max-width: 780px) {
-  .circlesContainrer {
-    padding: 100px 30px;
-  }
-
   .circle1,
   .circle2,
   .circle3,
@@ -176,10 +157,12 @@
   .circle2,
   .circle3,
   .circle4 {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     align-self: center;
     margin-bottom: 20px;
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
   }
   .title {
     display: none;

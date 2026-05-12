@@ -17,37 +17,44 @@
 }
 
 .freightColTitle {
-  position: absolute;
-  left: 0;
-  top: 80%;
-  background-color: #1a0474;
-  padding: 20px;
-  width: 60%;
-  text-align: end;
-  color: aliceblue;
   word-wrap: wrap;
+  background-color: #1a0474;
   font-size: 2em;
+  left: 0;
+  padding: 20px;
+  position: absolute;
+  text-align: end;
+  top: 80%;
+  width: 60%;
+  color: aliceblue;
 }
 
 .freightDesc {
+  color: #f0f8ff;
   position: absolute;
-  width: 100%;
+}
+
+.freightDesc {
+  background-color: #4d3b81e0;
   bottom: 0;
-  height: 40%;
   display: none;
   flex-direction: column;
   gap: 5px;
-  background-color: #4d3b81e0;
-  color: aliceblue;
+  height: 40%;
   padding-left: 10%;
   padding-top: 30px;
+  width: 100%;
 }
 
-.freightDesc button {
-  border-radius: 50%;
+.freightDescLink {
   background-color: #1a0474;
-  width: 60px;
+  border-radius: 50%;
+  display: flex;
   height: 60px;
+  justify-content: center;
+  width: 60px;
+  align-items: center;
+  text-decoration: none;
 }
 
 .freightDesc h1 {
@@ -55,31 +62,31 @@
   margin: 0;
 }
 
-.freightDesc p {
-  display: -webkit-box; /* Enables flexbox layout */
-  -webkit-box-orient: vertical; /* Sets vertical orientation */
-  overflow: hidden; /* Hides overflow */
-  text-overflow: ellipsis; /* Adds the ellipsis (...) */
-  -webkit-line-clamp: 4; /* Limits the number of lines to show */
+.freightDescP {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
   max-width: 80%;
   font-size: 1.3em;
+  margin: 0;
 }
 
-.freightCol:hover {
-  .freightColTitle {
-    display: none;
-  }
-  .freightDesc {
-    display: flex;
-  }
-
-  img {
-    opacity: 0.5;
-    filter: grayscale(0.6);
-  }
+.freightCol:hover .freightColTitle {
+  display: none;
 }
 
-.freightDesc button:hover {
+.freightCol:hover .freightDesc {
+  display: flex;
+}
+
+.freightCol:hover img {
+  opacity: 0.5;
+  filter: grayscale(0.6);
+}
+
+.freightDescLink:hover {
   background-color: #b7b7db;
 }
 

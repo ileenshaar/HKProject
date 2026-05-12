@@ -1,106 +1,55 @@
 import React, { useEffect, useRef } from "react";
 import "./whyHK.css";
+import { useLanguage } from "../LanguageContext/LanguageContext";
 
 function WhyHK() {
   const sectionRef = useRef(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
-    const section = sectionRef.current;
-    const circles = section.querySelectorAll(".circle1, .circle3");
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          // Add animation classes to each circle with a slight delay
-          circles.forEach((circle, index) => {
-            setTimeout(() => {
-              circle.classList.add("animate");
-            }, index * 300); // Adjust delay (300ms between each)
-          });
-        } else {
-          // Remove animation classes to reset animation on exit
-          circles.forEach((circle) => {
-            circle.classList.remove("animate");
-          });
-        }
-      },
-      {
-        threshold: 0.4, // Trigger when 50% of the section is visible
-      }
+    const circles = sectionRef.current.querySelectorAll(
+      ".circle1, .circle2, .circle3, .circle4"
     );
-
-    observer.observe(section);
-
-    return () => observer.disconnect(); // Clean up observer on unmount
-  }, []);
-
-  useEffect(() => {
-    const section = sectionRef.current;
-    const circles = section.querySelectorAll(".circle2, .circle4");
-
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          // Add animation classes to each circle with a slight delay
-          circles.forEach((circle, index) => {
-            setTimeout(() => {
-              circle.classList.add("animate");
-            }, index * 300); // Adjust delay (300ms between each)
-          });
-        } else {
-          // Remove animation classes to reset animation on exit
-          circles.forEach((circle) => {
-            circle.classList.remove("animate");
-          });
-        }
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            observer.unobserve(entry.target);
+          }
+        });
       },
-      {
-        threshold: 0.7, // Trigger when 50% of the section is visible
-      }
+      { threshold: 0.2 }
     );
-
-    observer.observe(section);
-
-    return () => observer.disconnect(); // Clean up observer on unmount
+    circles.forEach((circle) => observer.observe(circle));
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="circlesContainrer" ref={sectionRef}>
-      <h1 className="titleSmallScreen">WHY KH?</h1>
+      <h1 className="titleSmallScreen">WHY HK?</h1>
 
       <div className="circleDual">
         <div className="circle1">
-          <h1>Networking</h1>
-          <p>
-            Proud members of trusted networks and International organizations,
-            including IATA, WCA, JCTRANS, FENEX and more.
-          </p>
+          <h1>Trust</h1>
+          <p>{t.trust}</p>
         </div>
         <div className="circle3">
-          <h1>Worldwide</h1>
-          <p>
-            With multiple Network offices all over the world and our own offices
-            in Europe, India, and HK China, we offer global freight know-how.
-          </p>
+          <h1>Services</h1>
+          <p>{t.services}</p>
         </div>
       </div>
 
-      <h1 className="title">WHY KH?</h1>
+      <h1 className="title">WHY HK?</h1>
 
       <div className="circleDual">
         <div className="circle2">
-          <h1>Qualified</h1>
-          <p>
-            We work with the highest standards and we have an ISO verification
-            that proves it.
-          </p>
+          <h1>Experience</h1>
+          <p>{t.experience}</p>
         </div>
         <div className="circle4">
-          <h1>Insured</h1>
-          <p>
-            All our transfers include Legal Liability covering $1.000.000 for
-            any one incident or occurrence.
-          </p>
+          <h1>Partnership</h1>
+          <p>{t.partnership}</p>
         </div>
       </div>
     </div>

@@ -4,6 +4,7 @@
   position: sticky;
   justify-content: space-between;
   height: 15vh;
+  max-height: 150px;
   z-index: 10;
   border-radius: 100px;
   background-color: #f1f1f149;
@@ -15,12 +16,13 @@
 .logoContainer {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: start;
+  padding-left: 30px;
   height: 100%;
   width: 30%;
 }
 .logo {
-  width: 100%;
+  width: 50%;
   height: 85%;
 }
 .content {
@@ -33,7 +35,7 @@
 .content a {
   display: flex;
   font-family: Georgia, "Times New Roman", Times, serif;
-  color: rgb(57, 56, 56);
+  color: #1a0474;
   font-size: 1.1em;
   font-weight: 600;
   padding: 4px 6px;
@@ -42,7 +44,7 @@
   width: max-content;
   align-items: center;
 }
-.content a:hover:not(:nth-child(2), :nth-child(3), :nth-last-child(1)),
+.content a:hover:not(:nth-last-child(1)),
 .content a.active {
   border-bottom: 3px solid #1a0474;
 }
@@ -159,6 +161,7 @@ button {
 .logoSec {
   width: inherit;
   height: inherit;
+  max-width: 80px;
 }
 @media screen and (min-width: 1880px) {
   .content a {

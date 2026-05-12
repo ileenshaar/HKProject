@@ -22,7 +22,7 @@
 }
 
 .introTexth3 {
-  color: aliceblue;
+  color: #223749;
   position: relative;
   width: 100%;
   left: 0;
@@ -45,6 +45,10 @@
     font-size: 70px;
     line-height: 100px;
   }
+}
+
+.introTexth4hidden {
+  display: none;
 }
 
 @media screen and (max-width: 511px) {

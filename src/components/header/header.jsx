@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from "react";
-import logo from "../../logo.svg";
-import hkLogo from "../../hk.svg";
+import logo from "../../images/hkLogo.png";
 import "./header.css";
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { useMediaQuery } from "@mui/material";
 import ReorderIcon from "@mui/icons-material/Reorder";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
+import { useLanguage } from "../LanguageContext/LanguageContext";
 
 function Header() {
+  const { lang, toggleLanguage, t } = useLanguage();
+  const location = useLocation();
+  const navigate = useNavigate();
+  const contactActive = location.hash === "#aboutUs";
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    navigate("/HKProject#aboutUs");
+    setTimeout(() => {
+      document.getElementById("aboutUs")?.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+  };
   const isSmallerScreen = useMediaQuery("(max-width:1024px)");
-  let viewBox = isSmallerScreen ? "0 -1 24 24" : "0 0 15 24";
   const [isClicked, setIsClicked] = useState(false);
 
   useEffect(() => {
@@ -35,62 +46,22 @@ function Header() {
   return (
     <div className="header">
       <div className="logoContainer">
-        <img className="logo" src={logo} />
+        <Link to="/HKProject">
+          <img className="logo" src={logo} alt="HK Logo" />
+        </Link>
       </div>
 
       <div className={isClicked ? "contentBlock" : "content"}>
-        <a href="#" class="active">
-          HOME
-        </a>
+        <NavLink to="/HKProject" end className={({ isActive }) => isActive && !contactActive ? "active" : ""}>
+          {t.home}
+        </NavLink>
+        <NavLink to="/Address">{t.address}</NavLink>
+        <NavLink to="/about">{t.about}</NavLink>
+        <a href="/HKProject#aboutUs" className={contactActive ? "active" : ""} onClick={handleContactClick}>{t.contact}</a>
         <a href="#">
-          <div className="dropdown">
-            <button class="dropbtn">
-              SERVICES
-              <ArrowDropDownIcon
-                viewBox={viewBox}
-                style={{
-                  width: "2rem",
-                  height: "2rem",
-                }}
-                className="arrowIcon"
-              />
-            </button>
-            <div class="dropdown-content">
-              <a href="#">AIR FREIGHT</a>
-              <a href="#">SEA FREIGHT</a>
-              <a href="#">ROAD FREIGHT</a>
-              <a href="#">PROJECT HK </a>
-            </div>
-          </div>
-        </a>
-        <a href="#">
-          <div class="dropdown">
-            <button class="dropbtn">
-              ABOUT US
-              <ArrowDropDownIcon
-                viewBox={viewBox}
-                style={{
-                  width: "2rem",
-                  height: "2rem",
-                }}
-              />
-            </button>
-            <div class="dropdown-content">
-              <a href="#">ABOUT HK</a>
-              <a href="#">MEET OUT TEAM</a>
-              <a href="#">JOIN OUR TEAM</a>
-              <a href="#">OUR MAGAZINE</a>
-            </div>
-          </div>
-        </a>
-
-        <a href="#">NEWS</a>
-        <a href="#">CONTACT US</a>
-        <a href="#">
-          <img className="logoSec" src={hkLogo} />
-        </a>
-        <a href="#">
-          <button className="quote">GET A QUOTE</button>
+          <button onClick={toggleLanguage} className="quote">
+            {lang === "ar" ? "English" : "العربية"}
+          </button>
         </a>
       </div>
 

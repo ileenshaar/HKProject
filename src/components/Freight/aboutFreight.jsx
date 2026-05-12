@@ -1,21 +1,22 @@
 import React from "react";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { Link } from "react-router-dom";
 
-function AboutFreight({ title, desc }) {
+function AboutFreight({ title, desc, link }) {
   return (
     <>
       <h1>{title}</h1>
-      <p>{desc}</p>
-      <button>
+      <p className="freightDescP">{desc}</p>
+      <Link to={link} className="freightDescLink">
         <ArrowForwardIosIcon
           sx={{
             fontSize: "20px",
             stroke: "currentColor",
-            strokeWidth: 2,
             color: "white",
+            alignSelf: "center",
           }}
         />
-      </button>
+      </Link>
     </>
   );
 }
