@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6336b647.css",
-    "main.js": "/static/js/main.f7febf7d.js",
+    "main.js": "/static/js/main.734e784a.js",
     "static/js/59.2d0650a9.chunk.js": "/static/js/59.2d0650a9.chunk.js",
     "static/media/hk5.png": "/static/media/hk5.cb7b3ba560947c8b72a0.png",
     "static/media/road-freight1.jpg": "/static/media/road-freight1.fd50dbc2965debb96631.jpg",
@@ -20,11 +20,11 @@
     "static/media/road.jpg": "/static/media/road.7f959e1c097648f9fd4c.jpg",
     "index.html": "/index.html",
     "main.6336b647.css.map": "/static/css/main.6336b647.css.map",
-    "main.f7febf7d.js.map": "/static/js/main.f7febf7d.js.map",
+    "main.734e784a.js.map": "/static/js/main.734e784a.js.map",
     "59.2d0650a9.chunk.js.map": "/static/js/59.2d0650a9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6336b647.css",
-    "static/js/main.f7febf7d.js"
+    "static/js/main.734e784a.js"
   ]
 }
