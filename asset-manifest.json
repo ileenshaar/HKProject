@@ -1,10 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6336b647.css",
-    "main.js": "/static/js/main.d132f6d0.js",
+    "main.css": "/static/css/main.63dc0110.css",
+    "main.js": "/static/js/main.8abe5e96.js",
     "static/js/453.6cba51d5.chunk.js": "/static/js/453.6cba51d5.chunk.js",
+    "static/media/hk6.png": "/static/media/hk6.d12917ccccffcc6597c3.png",
     "static/media/hk5.png": "/static/media/hk5.cb7b3ba560947c8b72a0.png",
+    "static/media/hk.png": "/static/media/hk.579a731e775582181f9e.png",
     "static/media/road-freight1.jpg": "/static/media/road-freight1.fd50dbc2965debb96631.jpg",
+    "static/media/hk2.png": "/static/media/hk2.6ffefd3a83e847ec10d6.png",
+    "static/media/hk4.png": "/static/media/hk4.5b8adc03018f2424ff2c.png",
     "static/media/ocean.png": "/static/media/ocean.d6320e0a3ba904f1aba5.png",
     "static/media/airFreight2.jpg": "/static/media/airFreight2.6919aa0903b9a1bf9c5b.jpg",
     "static/media/seaFreight4.jpg": "/static/media/seaFreight4.b53323e0fc97b84aee8d.jpg",
@@ -19,12 +23,12 @@
     "static/media/download.jpg": "/static/media/download.d21a384d1b7e7ec78714.jpg",
     "static/media/road.jpg": "/static/media/road.7f959e1c097648f9fd4c.jpg",
     "index.html": "/index.html",
-    "main.6336b647.css.map": "/static/css/main.6336b647.css.map",
-    "main.d132f6d0.js.map": "/static/js/main.d132f6d0.js.map",
+    "main.63dc0110.css.map": "/static/css/main.63dc0110.css.map",
+    "main.8abe5e96.js.map": "/static/js/main.8abe5e96.js.map",
     "453.6cba51d5.chunk.js.map": "/static/js/453.6cba51d5.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6336b647.css",
-    "static/js/main.d132f6d0.js"
+    "static/css/main.63dc0110.css",
+    "static/js/main.8abe5e96.js"
   ]
 }
